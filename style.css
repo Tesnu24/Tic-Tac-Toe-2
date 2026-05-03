@@ -1,0 +1,137 @@
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+min-height: 100vh;
+background: linear-gradient(135deg, #0b3d2e, #145a4a, #1f6f5b);
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.players {
+margin: 10px;
+}
+
+.players input {
+padding: 8px;
+margin: 5px;
+border-radius: 8px;
+border: none;
+outline: none;
+}
+/* Title */ 
+h1 {
+margin-top: 20px;
+font-size: 2.6rem;
+color: #e0f2fe;
+text-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+}
+
+/* Mode buttons */
+.mode {
+margin: 15px;
+}
+
+.mode button {
+padding: 10px 22px;
+margin: 5px;
+border: none;
+border-radius: 12px;
+cursor: pointer;
+background: #1f2937;
+color: #e5e7eb;
+transition: 0.25s;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.mode button:hover {
+background: #22d3ee;
+color: #0b1220;
+transform: scale(1.05);
+}
+
+/* Status text */
+#status {
+font-size: 1.3rem;
+margin: 10px;
+color: #fbbf24;
+text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+}
+
+/* Board */
+.board {
+display: grid;
+grid-template-columns: repeat(3, 110px);
+gap: 12px;
+margin: 20px;
+padding: 12px;
+background: rgba(15, 23, 42, 0.35);
+border-radius: 20px;
+backdrop-filter: blur(8px);
+}
+
+/* Cells */
+.cell {
+width: 110px;
+height: 110px;
+background: #94a3b8;
+border-radius: 16px;
+font-size: 2.5rem;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: 0.2s;
+box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+color: #0b1220;
+}
+
+.cell:hover {
+background: #cbd5e1;
+transform: scale(1.05);
+}
+
+.cell:active {
+transform: scale(0.95);
+}
+
+/* Winning cells */
+.win {
+background: #22c55e !important;
+color: white;
+box-shadow: 0 0 18px #22c55e;
+}
+
+/* Restart button */
+#restart {
+margin-top: 10px;
+padding: 10px 25px;
+border: none;
+border-radius: 12px;
+background: #ef4444;
+color: white;
+font-size: 1rem;
+cursor: pointer;
+transition: 0.3s;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#restart:hover {
+background: #dc2626;
+transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+.board {
+grid-template-columns: repeat(3, 90px);
+}
+
+.cell {
+width: 90px;
+height: 90px;
+}
+}
